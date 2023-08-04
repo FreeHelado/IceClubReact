@@ -1,38 +1,108 @@
+:root {
+  --colorBg: rgb(11, 17, 32);
+  --colorBgLigth: rgb(15, 23, 42);
+  --colorPrimario: rgb(56, 189, 248);
+
+  --mobile: 480px;
+
+  background-color: var(--colorBg);
+}
+
 .App {
   text-align: center;
+  background-color: var(--colorBg);
 }
 
-.App-logo {
-  height: 20vmin;
-  pointer-events: none;
+nav {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  justify-content: space-between;
+  padding: 20px;
+  position: sticky;
+  top: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.Menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.Menu ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.Menu ul li {
+  list-style: none;
+  display: flex;
+}
+
+.Menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all .3s;
+}
+
+.Menu ul li a:hover {
+  color: var(--colorPrimario);
+}
+
+
+nav img {
+  width: 250px;
+}
+
+@media (max-width:720px) {
+  .Menu ul {
+    display: none;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Carrito {
+  position: relative;
+}
+
+.Carrito i {
+  font-size: 40px;
+  padding-right: 10px;
+}
+
+.Carrito span {
+  position: absolute;
+  top: 0;
+  right: -5px;
+  background-color: var(--colorPrimario);
+  padding: 5px 10px;
+  border-radius: 50px;
+  font-size: 18px;
+}
+
+.itemList {
+  max-width: 1400px;
+  margin: 0 auto;
+  border: 3px dashed var(--colorPrimario);
+  border-radius: 10px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: var(--colorBgLigth);
+  color: var(--colorPrimario);
+  min-height: 100vh;
+  margin-block: 20px 80px;
 }
 
-.App-link {
-  color: #61dafb;
+.itemList h1 {
+    color: var(--colorPrimario);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width:1400px) {
+  .itemList {
+    margin-inline: 15px;
   }
 }

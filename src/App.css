@@ -1,8 +1,10 @@
 :root {
   --colorBg: rgb(11, 17, 32);
   --colorBgLigth: rgb(15, 23, 42);
+  --colorBgExtraLigth: rgb(21, 32, 56);
+  --colorBgSuperLigth: rgb(36, 51, 85);
   --colorPrimario: rgb(56, 189, 248);
-
+  --colorSecundario: rgba(56, 189, 248, .8);
   --mobile: 480px;
 
   background-color: var(--colorBg);

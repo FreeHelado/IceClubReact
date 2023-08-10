@@ -1,0 +1,59 @@
+.Disco {
+    background-color: var(--colorBgExtraLigth);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px;
+    transition: all .3s;
+}
+
+.Disco:hover {
+    background-color: var(--colorBgSuperLigth);
+}
+
+.Disco figure {
+    overflow: hidden;
+    margin: 0;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
+}
+
+.Disco figure img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.Disco .Discos__info {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    align-items: flex-start;
+    color: #fff;
+    gap: 5px;
+}
+
+.Disco .Discos__info h2 {
+    font-size: 20px;
+    text-align: left;
+    font-weight: 700;
+    margin: 0;
+}
+
+.Disco .Discos__info h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.Disco .Discos__info .Discos__info--detalle {
+    display: flex;
+    align-items: center;
+    color: var(--colorSecundario);
+    gap: 10px;
+    padding-block: 15px;
+}
+
+.Disco .Discos__info .Discos__info--detalle span {
+    font-size: 16px;
+    margin: 0;
+}

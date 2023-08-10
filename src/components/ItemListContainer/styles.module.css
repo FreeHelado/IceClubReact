@@ -1,6 +1,15 @@
 .itemList {
     max-width: 1400px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: 20px 80px;
+}
+
+.itemList .error {
+    max-width: 1400px;
+    margin: 0 auto;
     border: 3px dashed var(--colorPrimario);
     border-radius: 10px;
     display: flex;
@@ -10,6 +19,7 @@
     color: var(--colorPrimario);
     min-height: 100vh;
     margin-block: 20px 80px;
+    padding: 15px;
 }
 
 .itemList h1 {

@@ -1,0 +1,7 @@
+.Discos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: stretch;
+    gap: 25px;
+
+}

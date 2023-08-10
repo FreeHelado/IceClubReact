@@ -1,0 +1,23 @@
+.itemList {
+    max-width: 1400px;
+    margin: 0 auto;
+    border: 3px dashed var(--colorPrimario);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--colorBgLigth);
+    color: var(--colorPrimario);
+    min-height: 100vh;
+    margin-block: 20px 80px;
+}
+
+.itemList h1 {
+    color: var(--colorPrimario);
+}
+
+@media (max-width:1400px) {
+    .itemList {
+        margin-inline: 15px;
+    }
+}

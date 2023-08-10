@@ -1,0 +1,18 @@
+.Carrito {
+    position: relative;
+}
+
+.Carrito i {
+    font-size: 40px;
+    padding-right: 10px;
+}
+
+.Carrito span {
+    position: absolute;
+    top: 0;
+    right: -5px;
+    background-color: var(--colorPrimario);
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-size: 18px;
+}

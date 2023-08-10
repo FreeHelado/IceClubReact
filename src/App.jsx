@@ -1,13 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <NavBar />
-      <ItemListContainer mensaje={'No hay discos todavía'} />
+      <ItemListContainer mensaje='No hay discos todavía' />
     </div>
   );
 } 

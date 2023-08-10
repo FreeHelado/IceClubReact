@@ -7,9 +7,10 @@ const NavBar = () => {
             <img src={logonav} alt="" />
             <div className="Menu">
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Catálogo</a></li>
-                <li><a href="#">Novedades</a></li>
+                <li><a href="/inex.html">Discos</a></li>
+                <li><a href="/inex.html">Vinilos</a></li>
+                <li><a href="/inex.html">Cassettes</a></li>
+                <li><a href="/inex.html">Novedades</a></li>
             </ul>
             <CartWidget />
             </div>

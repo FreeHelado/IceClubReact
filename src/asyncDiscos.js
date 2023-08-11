@@ -31,6 +31,28 @@ const productos = [
         stock: 100,
         precio: 50,
         desripcion: 'Descripción de Cochran'
+    },
+    {
+        id: '4',
+        titulo: 'Axis: Bold As Love',
+        artista: 'The Jimi Hendrix Experience',
+        categoria: 'Vinilo',
+        anio: '1967',
+        img: 'https://i.discogs.com/27JqDA5Hi80q4j2nv4DNDl8vw3HzydECG-zjf3RH26E/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExOTcx/MTQtMTM2ODEzNTE1/MS02MzgxLmpwZWc.jpeg',
+        stock: 100,
+        precio: 50,
+        desripcion: 'Descripción de Cochran'
+    },
+    {
+        id: '5',
+        titulo: 'King Of The Surf Guitar',
+        artista: 'Dick Dale',
+        categoria: 'Vinilo',
+        anio: '1968',
+        img: 'https://i.discogs.com/t9lvCpGWE3YaGsXJJ8JRZrreXnQfBeHGuE5_cCL2YmY/rs:fit/g:sm/q:90/h:588/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQ4NDg2/MS0xNTQzMDg2MTk2/LTY3MjIuanBlZw.jpeg',
+        stock: 100,
+        precio: 50,
+        desripcion: 'Descripción de Cochran'
     }
 ]
 
@@ -38,6 +60,6 @@ export const getDiscos = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(productos)
-        }, 5000)
+        }, 2500)
     })
 }

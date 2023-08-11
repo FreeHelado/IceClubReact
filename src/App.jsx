@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div className="App">
       <NavBar />
-      <ItemListContainer mensaje='No hay discos todavía' />
+      <ItemListContainer/>
     </div>
   );
 } 

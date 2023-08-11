@@ -10,6 +10,9 @@
     gap: 15px;
     background-color: var(--colorBgLigth);
     border-radius: 10px;
+    z-index: 5;
+    position: inherit;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
 }
 
 .disco-ampliado__container 
@@ -76,9 +79,9 @@ h3 {
 .disco-ampliado__container--info--botones--cantidad {
     display: flex;
     align-items: center;
-    border-radius: 5px;
-    border: 2px solid var(--colorBgSuperLigth);
+    border-radius: 8px;
     margin-block: 15px;
+    background-color: #fff;
 }
 
 
@@ -86,13 +89,13 @@ h3 {
 input {
     height: 60px;
     width: 80px;
-    background-color: var(--colorBg);
-    color: #fff;
+    background-color: #fff;
+    color: var(--colorBg);
     box-shadow: none;
     border: none;
     border-radius: 0;
     font-size: 26px;
-    border-inline: 2px solid var(--colorBgSuperLigth);
+    border-inline: 1px solid var(--colorBgSuperLigth);
     text-align: center;
 }
 .disco-ampliado__container--info--botones--cantidad 
@@ -108,13 +111,15 @@ i {
     padding: 10px 15px;
     cursor: pointer;
     transition: all .2s;
+    color: var(--colorBg);
     &:hover {
-        color: #fff;
+        color: var(--colorPrimario);
         
     }  
     &:active {
         transform: translateY(2px);
-        background-color: var(--colorBg);
+        background-color: #f3f2f2;
+        border-radius: 8px;
     }  
 }
 
@@ -134,8 +139,8 @@ button {
     gap: 10px;
     border-radius: 8px;
     border: none;
-    background-color: var(--colorPrimario);
-    color: #fff;
+    background-color: #fff;
+    color: var(--colorBg);
     padding-inline: 20px;
     transition: all .3s;
 }

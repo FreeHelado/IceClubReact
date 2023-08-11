@@ -1,7 +1,45 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import styles from './styles.module.css'
+import tapa from './tapa.jpg'
 
 const Disco = () => {
+
+    const discoRef = useRef(null);
+
+  useEffect(() => {
+    const img = discoRef.current.querySelector('figure img');
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+
+    img.onload = () => {
+      canvas.width = img.width;
+      canvas.height = img.height;
+      ctx.drawImage(img, 0, 0, img.width, img.height);
+
+      const imageData = ctx.getImageData(0, 0, img.width, img.height).data;
+
+      let totalR = 0;
+      let totalG = 0;
+      let totalB = 0;
+      let count = 0;
+
+      for (let i = 0; i < imageData.length; i += 4) {
+        totalR += imageData[i];
+        totalG += imageData[i + 1];
+        totalB += imageData[i + 2];
+        count++;
+      }
+
+      const avgR = Math.floor(totalR / count);
+      const avgG = Math.floor(totalG / count);
+      const avgB = Math.floor(totalB / count);
+
+      const backgroundColor = `rgb(${avgR}, ${avgG}, ${avgB})`;
+      discoRef.current.style.backgroundColor = backgroundColor;
+    };
+    }, []);
+
+
     const [valorContador, setValorContador] = useState(0)
 
     const sumar = () => {
@@ -11,13 +49,32 @@ const Disco = () => {
         setValorContador(Number(valorContador) - 1)
     }
 
+    const discoStyle = {
+        backgroundImage: `url(${tapa})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        position: 'relative',
+    };
     
+    const overlayStyle = {
+        content: '',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        zIndex: 1,
+        pointerEvents: 'none',
+    };
 
     return (
-        <section className={styles['disco-ampliado']}>
-            <div className={styles['disco-ampliado__container']}>
+        <section className={styles['disco-ampliado']} style={discoStyle}>
+            <div style={overlayStyle}></div>
+            <div className={styles['disco-ampliado__container']} ref={discoRef}>
                 <figure>
-                    <img src="https://i.discogs.com/27JqDA5Hi80q4j2nv4DNDl8vw3HzydECG-zjf3RH26E/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExOTcx/MTQtMTM2ODEzNTE1/MS02MzgxLmpwZWc.jpeg" alt="" />
+                    <img src={tapa} alt="" />
                 </figure>
                 <div className={styles['disco-ampliado__container--info']}>
                     <h1>Axis: Bold As Love</h1>

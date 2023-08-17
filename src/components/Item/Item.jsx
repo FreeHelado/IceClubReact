@@ -1,6 +1,6 @@
 import styles from './styles.module.css'
 
-const Item = ({id, titulo, artista, categoria, anio, img, precio}) => {
+const Item = ({id, titulo, artista, categoria, anio, sello, genero, img, precio}) => {
     return (
         <div className={styles['disco']}>
             <figure>
@@ -12,6 +12,8 @@ const Item = ({id, titulo, artista, categoria, anio, img, precio}) => {
                 <div className={styles['discos__info--detalle']}>
                     <span>{categoria}</span>
                     <span>{anio}</span>
+                    <span>{genero}</span>
+                    <span>{sello}</span>
                 </div>
                 <button>Lo quiero</button>
             </div>

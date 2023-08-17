@@ -48,14 +48,18 @@
 .disco .discos__info .discos__info--detalle {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     color: var(--colorSecundario);
-    gap: 10px;
+    gap: 5px;
     padding-block: 15px;
 }
 
 .disco .discos__info .discos__info--detalle span {
-    font-size: 18px;
+    font-size: 14px;
     margin: 0;
+    background-color: var(--colorBg);
+    border-radius: 50px;
+    padding: 5px 10px;
 }
 
 .disco button {

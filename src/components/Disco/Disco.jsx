@@ -1,12 +1,12 @@
 import { useState, useRef, useEffect } from 'react'
 import styles from './styles.module.css'
-import tapa from './tapa.jpg'
+import tapa from '../../assets/covers/R-8392678-1460792762-1145.jpg'
 
 const Disco = () => {
 
-    const discoRef = useRef(null);
+const discoRef = useRef(null);
 
-  useEffect(() => {
+    useEffect(() => {
     const img = discoRef.current.querySelector('figure img');
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
@@ -39,16 +39,6 @@ const Disco = () => {
     };
     }, []);
 
-
-    const [valorContador, setValorContador] = useState(0)
-
-    const sumar = () => {
-        setValorContador(Number(valorContador) + 1)
-    }
-    const restar = () => {
-        setValorContador(Number(valorContador) - 1)
-    }
-
     const discoStyle = {
         backgroundImage: `url(${tapa})`,
         backgroundSize: 'cover',
@@ -68,6 +58,16 @@ const Disco = () => {
         zIndex: 1,
         pointerEvents: 'none',
     };
+
+    const [valorContador, setValorContador] = useState(0)
+
+    const sumar = () => {
+        setValorContador(Number(valorContador) + 1)
+    }
+    const restar = () => {
+        setValorContador(Number(valorContador) - 1)
+    }
+
 
     return (
         <section className={styles['disco-ampliado']} style={discoStyle}>

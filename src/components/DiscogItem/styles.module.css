@@ -1,10 +1,3 @@
-.discogs {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: stretch;
-    gap: 25px;
-}
-
 .discog:hover {
     background-color: var(--colorBgSuperLigth);
 }
@@ -86,13 +79,4 @@
 .discog button:hover {
     background-color: #fff;
     color: var(--colorBgLigth);
-}
-
-.itemList {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-block: 20px 80px;
 }

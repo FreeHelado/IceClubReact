@@ -1,10 +1,10 @@
 import styles from './styles.module.css'
 import Item from '../Item/Item';
 
-const ItemList = ({ productos }) => {
+const ItemList = ({ discos }) => {
     return (
         <section className={styles['discos']}>
-            {productos.map(prod => <Item key={prod.id} {...prod} />)}
+            {discos.map(disco => <Item key={disco.id} {...disco} />)}
         </section>
     )
 }

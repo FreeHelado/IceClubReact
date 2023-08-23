@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import logonav from '../../../src/logo.svg';
+import { Link } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget';
-import styles from './styles.module.css'
+import styles from './styles.module.css';
 
 const NavBar = () => {
     const [scrollBackground, setScrollBackground] = useState(false);
 
     const handleScroll = () => {
-        setScrollBackground(window.scrollY > 200 ? true : false);
+        setScrollBackground(window.scrollY > 60 ? true : false);
     };
 
     useEffect(() => {
@@ -19,13 +19,15 @@ const NavBar = () => {
 
     return (
         <nav className={`${styles.nav} ${scrollBackground ? styles.scrollBackground : ''}`}>
-            <img src={logonav} alt="" />
+            <Link to="/"><img src="/assets/logo.svg" alt="IceCLub" /></Link>
             <div className={styles['menu']}>
-            <ul>
-                <li><a href="/inex.html">Discos</a></li>
-                <li><a href="/inex.html">Vinilos</a></li>
-                <li><a href="/inex.html">Cassettes</a></li>
-                <li><a href="/inex.html">Novedades</a></li>
+                <ul>
+                <li><Link to="/">Inicio</Link></li>
+                <li><Link to="/categoria/Vinilo">Vinilos</Link></li>
+                <li><Link to="/categoria/Simple">Simples</Link></li>
+                <li><Link to="/categoria/CD">Discos</Link></li>
+                <li><Link to="/categoria/Cassette">Cassettes</Link></li>
+                
             </ul>
             <CartWidget />
             </div>

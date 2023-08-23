@@ -1,4 +1,5 @@
 import styles from './styles.module.css'
+import { Link } from 'react-router-dom';
 
 const Item = ({id, titulo, artista, categoria, anio, sello, genero, img, precio}) => {
     return (
@@ -8,14 +9,14 @@ const Item = ({id, titulo, artista, categoria, anio, sello, genero, img, precio}
             </figure>
             <div className={styles['discos__info']}>
                 <h2>{titulo} - {artista}</h2>
-                <h3>{precio} USD</h3>
+                <h3>$ {precio}</h3>
                 <div className={styles['discos__info--detalle']}>
                     <span>{categoria}</span>
                     <span>{anio}</span>
                     <span>{genero}</span>
                     <span>{sello}</span>
                 </div>
-                <button>Lo quiero</button>
+                <Link to={`/disco/${id}`}>Lo quiero</Link>
             </div>
         </div>
     )

@@ -80,3 +80,23 @@
     background-color: #fff;
     color: var(--colorBgLigth);
 }
+
+.disco a {
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: var(--colorBg);
+    color: #fff;
+    border-radius: 5px;
+    padding: 8px;
+    width: 100%;
+    cursor: pointer;
+    font-family: var(--font);
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.disco a:hover {
+    background-color: #fff;
+    color: var(--colorBgLigth);
+}

@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import styles from './styles.module.css';
 import { Link } from 'react-router-dom';
 
-const Disco = ({id, titulo, artista, categoria, anio, sello, genero, img, precio, desripcion}) => {
+const Disco = ({id, titulo, artista, categoria, anio, sello, genero, img, precio, desripcion, stock}) => {
 
     const discoRef = useRef(null);
     const [textColor, setTextColor] = useState('#fff');
@@ -50,14 +50,14 @@ const Disco = ({id, titulo, artista, categoria, anio, sello, genero, img, precio
     return y >= 128 ? 'rgb(11, 17, 32)' : '#fff';
     };
 
-    const [valorContador, setValorContador] = useState(0);
+    const [valorContador, setValorContador] = useState(1);
 
     const sumar = () => {
-        setValorContador(Number(valorContador) + 1);
+        valorContador < stock && setValorContador(Number(valorContador) + 1);
     }
 
     const restar = () => {
-        setValorContador(Number(valorContador) - 1);
+        valorContador > 1 && setValorContador(Number(valorContador) - 1);
     }
 
     return (

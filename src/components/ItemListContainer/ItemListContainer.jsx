@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react'
-import { getDiscos } from '../../asyncDiscos'
-import { useParams } from 'react-router-dom'
-import ItemList from '../ItemList/ItemList'
-import styles from './styles.module.css'
+import { useState, useEffect } from 'react';
+import { getDiscos } from '../../asyncDiscos';
+import { useParams } from 'react-router-dom';
+import ItemList from '../ItemList/ItemList';
+import styles from './styles.module.css';
 
 const ItemListContainer = () => {
     const [discos, setDiscos] = useState([]);
@@ -19,10 +19,10 @@ const ItemListContainer = () => {
                 }
             })
             .catch(error => {
-                console.error(error)
+                console.error(error);
             })
-            .finally(() => setCargando(false))
-    }, [categoria])
+            .finally(() => setCargando(false));
+    }, [categoria]);
 
     return (
         <>

@@ -264,7 +264,7 @@ const discos = [
         id: '7036268',
         titulo: 'Hypnophobia',
         artista: 'Jacco Gardner',
-        categoria: 'Vinilo',
+        categoria: 'CD',
         anio: '2015',
         img: '/assets/R-7036268-1432369935-4838.jpg',
         stock: 100,
@@ -343,7 +343,7 @@ const discos = [
         id: '2771111',
         titulo: 'The Explosive Freddy Cannon',
         artista: 'Freddy Cannon',
-        categoria: 'Cassette',
+        categoria: 'Vinilo',
         anio: '1980',
         img: '/assets/R-2771111-1422739149-7583.jpg',
         stock: 100,
@@ -356,7 +356,7 @@ const discos = [
         id: '5108220',
         titulo: 'Room On Fire',
         artista: 'The Strokes',
-        categoria: 'Cassette',
+        categoria: 'CD',
         anio: '2013',
         img: '/assets/R-5108220-1394568749-5990.jpg',
         stock: 100,
@@ -390,6 +390,32 @@ const discos = [
         sello: 'Odeon',
         genero: 'Rock',
         desripcion: 'Originally released in 1966, Shakers For You was the second LP by Los Shakers, the legendary beat/pop band from Uruguay. An album clearly influenced by Help!, Rubber Soul and Revolver, but showing a band that were more than mere copycats, offering some revolutionary compositions and influences such as bossa-nova.'
+    },
+    {
+        id: '12345678',
+        titulo: 'El Disco del Helado',
+        artista: 'Los Shakers',
+        categoria: 'Cassette',
+        anio: '2020',
+        img: '/assets/cassette-del-helado600.jpg',
+        stock: 100,
+        precio: 12.76,
+        sello: 'Shaemingow Records',
+        genero: 'Surf',
+        desripcion: 'Mezcla y Master: Santiago Fontona en Farmbox Studios en Nueva Zelanda. Grabado entre Setiembre y Diciembre del 2019 en Montevideo y Canelones: Baterías: en Estudio Módulo por Juan Branaá, Guitarras, Bajos y Poderes: Blast Off Records, en la Casa de Pablito y en Casa de Juanma. Los Ultraman: Alejandro Ferreira (guitarras, lapsteel y teclados), Pablo Martín (guitarras, teclados, coros y fx), Fabricio Gómez (bajo), Juan Manuel Cayota (batería, percusiones, bajos, guitarras y teclados)'
+    },
+    {
+        id: '12345578',
+        titulo: 'Reverb Sounds',
+        artista: 'Pasajeros del Malaysia Airlines',
+        categoria: 'Cassette',
+        anio: '2020',
+        img: '/assets/pma-cassette_1200.jpg',
+        stock: 100,
+        precio: 12.76,
+        sello: 'Shaemingow Records',
+        genero: 'Reggae',
+        desripcion: 'Reverb sounds, fue grabado en junio del 2019 en una sesión eterna un sábado frío, en el estudio, Septimopiso, a cargo de la noble y atenta dirección de Mateo Flores.Contamos a su vez, en dicha sesión, con la asistencia erudita y amable de Pablo Balmelli. Los overdubs y las voces, así como la mezcla, se realizaron en estudio BlastOff, a cargo de Mateo Flores y los integrantes de la banda durante todo el resto del 2019 y algo del 2020.'
     },
     {
         id: '2917760',
@@ -497,6 +523,6 @@ export const getDiscoById = (discId) => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(discos.find(disc => disc.id === discId))
-        }, 100)
+        }, 1000)
     })
 }

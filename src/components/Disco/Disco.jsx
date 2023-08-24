@@ -1,11 +1,12 @@
-import { useState, useRef, useEffect } from 'react'
-import styles from './styles.module.css'
-import { Link } from 'react-router-dom'
+import { useState, useRef, useEffect } from 'react';
+import styles from './styles.module.css';
+import { Link } from 'react-router-dom';
 
 const Disco = ({id, titulo, artista, categoria, anio, sello, genero, img, precio, desripcion}) => {
 
     const discoRef = useRef(null);
     const [textColor, setTextColor] = useState('#fff');
+    
     
     useEffect(() => {
     const img = discoRef.current.querySelector('figure img');
@@ -49,19 +50,18 @@ const Disco = ({id, titulo, artista, categoria, anio, sello, genero, img, precio
     return y >= 128 ? 'rgb(11, 17, 32)' : '#fff';
     };
 
-    const [valorContador, setValorContador] = useState(0)
+    const [valorContador, setValorContador] = useState(0);
 
     const sumar = () => {
-        setValorContador(Number(valorContador) + 1)
-    }
-    const restar = () => {
-        setValorContador(Number(valorContador) - 1)
+        setValorContador(Number(valorContador) + 1);
     }
 
+    const restar = () => {
+        setValorContador(Number(valorContador) - 1);
+    }
 
     return (
         <section className={styles['disco-ampliado']} >
-            
             <div className={styles['disco-ampliado__container']} ref={discoRef}>
                 <div className={styles['disco-ampliado__container--bloque']}>
                     <figure>

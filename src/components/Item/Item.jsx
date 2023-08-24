@@ -1,4 +1,4 @@
-import styles from './styles.module.css'
+import styles from './styles.module.css';
 import { Link } from 'react-router-dom';
 
 const Item = ({id, titulo, artista, categoria, anio, sello, genero, img, precio}) => {
@@ -16,7 +16,7 @@ const Item = ({id, titulo, artista, categoria, anio, sello, genero, img, precio}
                     <span>{genero}</span>
                     <span>{sello}</span>
                 </div>
-                <Link to={`/disco/${id}`}>Lo quiero</Link>
+                <Link to={`/disco/${id}`}>Ampliar</Link>
             </div>
         </div>
     )

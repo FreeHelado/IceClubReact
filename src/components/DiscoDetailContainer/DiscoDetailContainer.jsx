@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { getDiscoById } from '../../asyncDiscos';
 import Disco from '../Disco/Disco';
 import { useParams } from 'react-router-dom';
+import styles from './styles.module.css';
 
 const DiscoDetailContainer = () => {
     const [disco, setDisco] = useState(null)
@@ -23,8 +24,9 @@ const DiscoDetailContainer = () => {
     return (
         <>
             {cargando ? (
-                <main>
+                <main className={styles['DiscoCargando']}>
                     <h1>Cargando Disco</h1>
+                    <span className="loader"></span>
                 </main>
             ) : (
                 <Disco {...disco}/>   

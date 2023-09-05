@@ -5,6 +5,14 @@
     align-items: center;
     justify-content: center;
     margin-block: 20px 80px;
+
+    @media (max-width:1400px) {
+        margin-inline: 15px;
+    }
+
+    h1 {
+        color: var(--colorPrimario);
+    }
 }
 
 .itemListCargando {
@@ -75,8 +83,3 @@
     }
 }
 
-@media (max-width:1400px) {
-    .itemList {
-        margin-inline: 15px;
-    }
-}

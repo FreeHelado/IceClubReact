@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { getDiscos } from '../../asyncDiscos';
 import { useParams } from 'react-router-dom';
 import ItemList from '../ItemList/ItemList';
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 const ItemListContainer = () => {
     const [discos, setDiscos] = useState([]);
@@ -26,6 +26,17 @@ const ItemListContainer = () => {
 
     return (
         <>
+            {/* {cargando &&
+                <main className={styles['itemListCargando']}>
+                    <h1>Cargando Discos</h1>
+                    <span className={styles['loader']}></span>
+                </main>
+            }
+            {!cargando &&
+                <main className={styles['itemList']}>
+                    <ItemList discos={discos}/>
+                </main>
+            } */}
             {cargando ? (
                 <main className={styles['itemListCargando']}>
                     <h1>Cargando Discos</h1>

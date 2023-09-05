@@ -1,4 +1,4 @@
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 import Item from '../Item/Item';
 
 const ItemList = ({ discos }) => {

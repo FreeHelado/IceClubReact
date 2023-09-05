@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget';
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 const NavBar = () => {
     const [scrollBackground, setScrollBackground] = useState(false);

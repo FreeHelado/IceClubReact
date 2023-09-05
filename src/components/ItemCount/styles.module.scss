@@ -1,0 +1,56 @@
+.counter {
+    display: flex;
+    align-items: center;
+    color: var(--colorBg);
+    background-color: #fff;
+    border-radius: 5px;
+
+    span {
+        font-size: 24px;
+        border-inline: 1px solid var(--colorBgExtraLigth);
+        padding: 15px 30px;
+    }
+
+    i {
+        font-size: 30px;
+        cursor: pointer;
+        padding-inline: 10px;
+        transition: all .2s;
+        &:hover {
+            color: var(--colorPrimario);
+        }
+        &:active {
+            color: var(--colorBgExtraLigth);
+            transform: translateY(2px);
+        }
+    }
+}
+
+.agregarBtn {
+    button {
+        font-size: 20px;
+        font-weight: 600;
+        font-family: var(--fuente);
+        height: 64px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-radius: 8px;
+        border: none;
+        background-color: #fff;
+        color: var(--colorBg);
+        padding-inline: 20px;
+        transition: all .3s;
+
+        &:hover {
+            background-color: var(--colorBgSuperLigth);
+            color: #fff;
+        }
+
+        &:active {
+            background-color: var(--colorBg);
+            transform: translateY(2px);
+        }
+    }
+}

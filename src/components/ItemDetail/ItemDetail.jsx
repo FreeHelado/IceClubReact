@@ -1,8 +1,10 @@
 import { useState, useRef, useEffect } from 'react';
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 import { Link } from 'react-router-dom';
+import ItemCount from '../ItemCount/ItemCount';
 
-const Disco = ({id, titulo, artista, categoria, anio, sello, genero, img, precio, desripcion, stock}) => {
+
+const Disco = ({id, titulo, artista, categoria, anio, sello, genero, img, precio, descripcion, stock}) => {
 
     const discoRef = useRef(null);
     const [textColor, setTextColor] = useState('#fff');
@@ -50,14 +52,16 @@ const Disco = ({id, titulo, artista, categoria, anio, sello, genero, img, precio
     return y >= 128 ? 'rgb(11, 17, 32)' : '#fff';
     };
 
-    const [valorContador, setValorContador] = useState(1);
-
-    const sumar = () => {
-        valorContador < stock && setValorContador(Number(valorContador) + 1);
+    const [cantidad, setCantidad] = useState(1);
+    const handleRestar = () => {
+        cantidad > 1 && setCantidad(cantidad - 1)
+    }
+    const handleSumar = () => {
+        cantidad < stock && setCantidad(cantidad + 1) 
     }
 
-    const restar = () => {
-        valorContador > 1 && setValorContador(Number(valorContador) - 1);
+    const handleAgregar = () => {
+        console.log({ id, titulo, artista, img, precio, cantidad })
     }
 
     return (
@@ -74,25 +78,16 @@ const Disco = ({id, titulo, artista, categoria, anio, sello, genero, img, precio
                         <h3 style={{ color: textColor }}>$ {precio}</h3>
 
                         <div className={styles['disco-ampliado__container--info--botones']}>
-                            <div className={styles['disco-ampliado__container--info--botones--cantidad']}>
-                                <i class="bi bi-dash" onClick={restar}></i>
-                                <input type="text" value={valorContador>0 ? valorContador : 1} />
-                                <i class="bi bi-plus" onClick={sumar}></i>
-                            </div>
+                           
+                            <ItemCount cantidad={cantidad} handleSumar={handleSumar} handleRestar={handleRestar} handleAgregar={handleAgregar} />
 
-                            <div className={styles['disco-ampliado__container--info--botones--add']}>
-                                <button>
-                                    <i class="bi bi-bag"></i>
-                                <span>Agregar al Carrito</span> 
-                                </button>
-                            </div>
                         </div>
 
                     </div>
 
                     <div className={styles['disco-ampliado__container--back']}>
                         <Link to="/">
-                           <i class="bi bi-arrow-left-short"></i>
+                           <i className="bi bi-arrow-left-short"></i>
                             <span>Volver al Listado</span>
                         </Link>
                     </div>
@@ -100,7 +95,7 @@ const Disco = ({id, titulo, artista, categoria, anio, sello, genero, img, precio
 
                 <div className={styles['disco-ampliado__container--detalles']}>
                     
-                    <p>{desripcion}</p>
+                    <p>{descripcion}</p>
                     
                     <div className={styles['disco-ampliado__container--detalles--atributos']}>
                         <span>Sello:<strong> {sello}</strong></span>

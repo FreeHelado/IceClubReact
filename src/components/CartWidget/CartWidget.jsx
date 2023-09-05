@@ -1,9 +1,9 @@
-import styles from './styles.module.css'
+import styles from './styles.module.scss'
 
 const CartWidget = () => {
     return (
         <div className={styles['carrito']}>
-            <i class="bi bi-bag"></i>
+            <i className="bi bi-bag"></i>
             <span>0</span>
         </div>
     )

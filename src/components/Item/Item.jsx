@@ -1,4 +1,4 @@
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 import { Link } from 'react-router-dom';
 
 const Item = ({id, titulo, artista, categoria, anio, sello, genero, img, precio}) => {
@@ -7,10 +7,10 @@ const Item = ({id, titulo, artista, categoria, anio, sello, genero, img, precio}
             <figure>
                 <img src={img} alt={titulo} />
             </figure>
-            <div className={styles['discos__info']}>
+            <div className={styles['disco__info']}>
                 <h2>{titulo} - {artista}</h2>
                 <h3>$ {precio}</h3>
-                <div className={styles['discos__info--detalle']}>
+                <div className={styles['disco__info--detalle']}>
                     <span>{categoria}</span>
                     <span>{anio}</span>
                     <span>{genero}</span>

@@ -1,0 +1,16 @@
+.carrito {
+    position: relative;
+    i {
+        font-size: 30px;
+        padding-inline: 20px 10px;
+    }
+    span {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background-color: var(--colorPrimario);
+        padding: 4px 10px;
+        border-radius: 50px;
+        font-size: 16px;
+    }
+}

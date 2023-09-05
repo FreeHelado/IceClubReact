@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { getDiscoById } from '../../asyncDiscos';
-import Disco from '../Disco/Disco';
+import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
-const DiscoDetailContainer = () => {
+const ItemDetailContainer = () => {
     const [disco, setDisco] = useState(null)
     const [cargando, setCargando] = useState([true])
 
@@ -29,11 +29,11 @@ const DiscoDetailContainer = () => {
                     <span className="loader"></span>
                 </main>
             ) : (
-                <Disco {...disco}/>   
+                <ItemDetail {...disco}/>   
                 )     
             }
         </>
     )
 }
 
-export default DiscoDetailContainer;
+export default ItemDetailContainer;

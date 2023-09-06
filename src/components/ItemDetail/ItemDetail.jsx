@@ -1,7 +1,9 @@
-import { useState, useRef, useEffect } from 'react';
+import { useContext, useState, useRef, useEffect } from 'react';
 import styles from './styles.module.scss';
 import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
+import { CartContext } from '../../context/CartContext';
+
 
 
 const Disco = ({id, titulo, artista, categoria, anio, sello, genero, img, precio, descripcion, stock}) => {
@@ -52,7 +54,10 @@ const Disco = ({id, titulo, artista, categoria, anio, sello, genero, img, precio
     return y >= 128 ? 'rgb(11, 17, 32)' : '#fff';
     };
 
+    const { carrito, setCarrito } = useContext(CartContext);
+
     const [cantidad, setCantidad] = useState(1);
+
     const handleRestar = () => {
         cantidad > 1 && setCantidad(cantidad - 1)
     }
@@ -61,7 +66,10 @@ const Disco = ({id, titulo, artista, categoria, anio, sello, genero, img, precio
     }
 
     const handleAgregar = () => {
-        console.log({ id, titulo, artista, img, precio, cantidad })
+        const discoAgregado = { id, titulo, artista, precio, cantidad };
+        console.log(discoAgregado);
+
+        setCarrito([...carrito, discoAgregado]); 
     }
 
     return (

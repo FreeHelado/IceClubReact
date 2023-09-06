@@ -67,9 +67,15 @@ const Disco = ({id, titulo, artista, categoria, anio, sello, genero, img, precio
 
     const handleAgregar = () => {
         const discoAgregado = { id, titulo, artista, precio, cantidad };
-        console.log(discoAgregado);
-
-        setCarrito([...carrito, discoAgregado]); 
+        const estaEnElCarrito = carrito.find((item) => item.id === discoAgregado.id);
+        
+        if (estaEnElCarrito) {
+            console.log("Esta en el carrito")
+        } else {
+            setCarrito([...carrito, discoAgregado]);
+        }
+        
+        console.log(carrito);
     }
 
     return (

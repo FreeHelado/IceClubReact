@@ -14,7 +14,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <CartContext.Provider value={[carrito, setCarrito]}>
+      <CartContext.Provider value={ {carrito, setCarrito} }>
         <BrowserRouter>
         <NavBar />
           <Routes>

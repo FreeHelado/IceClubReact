@@ -1,0 +1,63 @@
+.micarrito {
+    color: #fff;
+
+    &__lista {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 980px;
+        margin: 0 auto;
+
+        &--card {
+            background-color: var(--colorBgExtraLigth);
+            border-radius: 10px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            padding: 15px;
+            transition: all .3s;
+
+            figure {
+                padding: 0;
+                margin: 0;
+                img {
+                    max-width: 300px;
+                    border-radius: 5px;
+                }
+            }
+
+            &--info {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                align-items: start;
+                h2 {
+                    margin: 0;
+                    padding: 0;
+                }
+                h3 {
+                    margin: 0;
+                    padding: 0;
+                }
+                p {
+                    margin: 0;
+                    padding: 0;
+                }
+                span {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                &--precio {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    padding-top: 15px;
+                    span {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

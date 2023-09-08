@@ -54,7 +54,7 @@ const Disco = ({id, titulo, artista, categoria, anio, sello, genero, img, precio
     return y >= 128 ? 'rgb(11, 17, 32)' : '#fff';
     };
 
-    const { carrito, setCarrito } = useContext(CartContext);
+    const { agregarAlCarrito } = useContext(CartContext);
 
     const [cantidad, setCantidad] = useState(1);
 
@@ -65,18 +65,7 @@ const Disco = ({id, titulo, artista, categoria, anio, sello, genero, img, precio
         cantidad < stock && setCantidad(cantidad + 1) 
     }
 
-    const handleAgregar = () => {
-        const discoAgregado = { id, titulo, artista, precio, cantidad };
-        const estaEnElCarrito = carrito.find((item) => item.id === discoAgregado.id);
-        
-        if (estaEnElCarrito) {
-            console.log("Esta en el carrito")
-        } else {
-            setCarrito([...carrito, discoAgregado]);
-        }
-        
-        console.log(carrito);
-    }
+    
 
     return (
         <section className={styles['disco-ampliado']} >
@@ -93,7 +82,11 @@ const Disco = ({id, titulo, artista, categoria, anio, sello, genero, img, precio
 
                         <div className={styles['disco-ampliado__container--info--botones']}>
                            
-                            <ItemCount cantidad={cantidad} handleSumar={handleSumar} handleRestar={handleRestar} handleAgregar={handleAgregar} />
+                            <ItemCount
+                                cantidad={cantidad}
+                                handleSumar={handleSumar}
+                                handleRestar={handleRestar}
+                                handleAgregar={() => { agregarAlCarrito(id, titulo, artista, precio, img, cantidad) }} />
 
                         </div>
 

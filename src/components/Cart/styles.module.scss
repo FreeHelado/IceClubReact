@@ -1,6 +1,7 @@
 .micarrito {
     color: #fff;
-
+    padding-block: 10px 60px;
+    
     &__lista {
         display: flex;
         flex-direction: column;
@@ -58,6 +59,43 @@
                     }
                 }
             }
+        }
+        &--vaciar {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+            border-radius: 5px;
+            padding: 10px 20px;
+            gap: 5px;
+            width: fit-content;
+            justify-content: center;
+            margin: 0 auto;
+            transition: all .2s;
+            &:hover {
+                background-color: #fff;
+                color: var(--colorBg);
+            }
+            span {
+                font-size: 18px;
+            }
+            i {
+               font-size: 24px; 
+            }
+        }
+    }
+
+    &__vacio {
+        background-color: var(--colorBgExtraLigth);
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        max-width: 980px;
+        margin: 0 auto;
+        h1 {
+            font-size: 100px;
         }
     }
 }

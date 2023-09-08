@@ -4,7 +4,7 @@ import { CartContext } from '../../context/CartContext';
 
 const Cart = () => {
 
-    const { carrito } = useContext(CartContext);
+    const { carrito, precioTotal } = useContext(CartContext);
 
     return (
         <div className={styles['micarrito']}>
@@ -27,7 +27,8 @@ const Cart = () => {
                         </div>
                     </div> 
                 ))
-            }
+                }
+                <h1>Precio Total: $ {precioTotal()}</h1>
             </section>
         </div>
     )

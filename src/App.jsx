@@ -9,6 +9,7 @@ import Cart from './components/Cart/Cart';
 import { CartContext } from './context/CartContext';
 import { db } from "./firebase/client";
 import { getDocs, collection, query, where, limit, getDoc, doc } from 'firebase/firestore';
+import Swal from 'sweetalert2';
 
 const App = () => {
 
@@ -69,10 +70,14 @@ const App = () => {
   const cantidadEnCarrito = () => {
     return carrito.reduce((acc, prod) => acc + prod.cantidad, 0);
   }
+
+  const precioTotal = () => {
+    return carrito.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0);
+  }
   
   return (
     <div className="App">
-      <CartContext.Provider value={ {carrito, agregarAlCarrito, cantidadEnCarrito} }>
+      <CartContext.Provider value={ {carrito, agregarAlCarrito, cantidadEnCarrito, precioTotal} }>
         <BrowserRouter>
         <NavBar />
           <Routes>

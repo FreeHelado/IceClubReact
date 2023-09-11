@@ -36,16 +36,18 @@ export const CartProvider = ( {children} ) => {
         }
         setCarrito(nuevoCarrito);
         mostrarAlerta()
-        console.table(carrito);
     }
 
     const cantidadEnCarrito = () => {
         return carrito.reduce((acc, prod) => acc + prod.cantidad, 0);
     }
 
+   
     const precioTotal = () => {
-        return carrito.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0);
+        const total = carrito.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0);
+        return total.toFixed(2);
     }
+
 
     const vaciarCarrito = () => {
         setCarrito([]);

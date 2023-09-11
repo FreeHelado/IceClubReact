@@ -73,12 +73,18 @@ const Cart = () => {
                                     <span>x {prod.cantidad}</span>
                                 </div>
                                 <h2>Total: $ {prod.precio * prod.cantidad}</h2>
-                                <button onClick={() => handleEliminar(prod.id)}>Eliminar</button>
+                                <i className="bi bi-x-lg" onClick={() => handleEliminar(prod.id)}></i>
                             </div>
                         </div> 
                     ))
                 }
-                    <h1>Precio Total: $ {precioTotal()}</h1>     
+                    <div className={styles['micarrito__lista--totales']}>
+                        <h1>Precio Total: $ {precioTotal()}</h1>
+                        <div className={styles['micarrito__lista--totales--btn']}>
+                            <i className="bi bi-music-note"></i>
+                            <span>CONTINUAR COMPRA</span>
+                        </div>
+                    </div>
                     <div onClick={handleVaciarCarrito} className={styles['micarrito__lista--vaciar']}>
                         <i className="bi bi-trash"></i>
                         <span>Vaciar Carrito</span>

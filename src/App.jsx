@@ -30,11 +30,11 @@ const App = () => {
   //FIREBASE - LLAMAR A UN SOLO DOCUMENTO
 
   ///FIREBASE - LLAMAR A TODOS LOS DOCUMENTOS
-  const collectionRef = collection(db, "products")
+  const collectionRef = collection(db, "discos")
   const getCollection = async () => {
     const data = await getDocs(collectionRef)
     const dataFiltrada = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
-    console.log(dataFiltrada)
+    console.table(dataFiltrada)
   }
 
   useEffect(() => {

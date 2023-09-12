@@ -1,0 +1,14 @@
+.ckeckout {
+    
+    background-color: var(--colorBgExtraLigth);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 980px;
+    margin: 0 auto;
+
+    h1 {
+        font-size: 100px;
+    }
+    
+}

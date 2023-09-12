@@ -1,6 +1,7 @@
 import styles from './styles.module.scss';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const Cart = () => {
@@ -80,9 +81,11 @@ const Cart = () => {
                 }
                     <div className={styles['micarrito__lista--totales']}>
                         <h1>Precio Total: $ {precioTotal()}</h1>
-                        <div className={styles['micarrito__lista--totales--btn']}>
-                            <i className="bi bi-music-note"></i>
-                            <span>CONTINUAR COMPRA</span>
+                        <div className={styles['micarrito__lista--totales--btn']} >
+                            <Link to="/checkout" >
+                                <i className="bi bi-music-note"></i>
+                                <span>CONTINUAR COMPRA</span>
+                            </Link>
                         </div>
                     </div>
                     <div onClick={handleVaciarCarrito} className={styles['micarrito__lista--vaciar']}>

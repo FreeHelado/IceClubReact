@@ -81,12 +81,20 @@ const Disco = ({id, titulo, artista, categoria, anio, sello, genero, img, precio
                         <h3 style={{ color: textColor }}>$ {precio}</h3>
 
                         <div className={styles['disco-ampliado__container--info--botones']}>
-                           
-                            <ItemCount
-                                cantidad={cantidad}
-                                handleSumar={handleSumar}
-                                handleRestar={handleRestar}
-                                handleAgregar={() => { agregarAlCarrito(id, titulo, artista, precio, img, cantidad) }} />
+
+                            {stock > 0 ? (
+                            
+                                <ItemCount
+                                    cantidad={cantidad}
+                                    handleSumar={handleSumar}
+                                    handleRestar={handleRestar}
+                                    handleAgregar={() => { agregarAlCarrito(id, titulo, artista, precio, img, cantidad) }} />
+                            ): (
+                                    <div className={styles['disco-ampliado__container--info--botones--agotado']}>
+                                      💔AGOTADO 
+                                    </div>
+                               
+                            )}    
 
                         </div>
 

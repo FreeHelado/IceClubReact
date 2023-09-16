@@ -73,7 +73,7 @@ const Cart = () => {
                                     <span>$ {prod.precio}</span>
                                     <span>x {prod.cantidad}</span>
                                 </div>
-                                <h2>Total: $ {prod.precio * prod.cantidad}</h2>
+                                <h2>Total: $ {((prod.precio * prod.cantidad).toFixed(2))}</h2>
                                 <i className="bi bi-x-lg" onClick={() => handleEliminar(prod.id)}></i>
                             </div>
                         </div> 

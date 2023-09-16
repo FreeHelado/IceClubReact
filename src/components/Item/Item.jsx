@@ -1,9 +1,15 @@
 import styles from './styles.module.scss';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Item = ({id, titulo, artista, categoria, anio, sello, genero, img, precio}) => {
+    
+    const navigate = useNavigate();
+    const redirectToDisco = () => {
+        navigate(`/disco/${id}`);
+    };
+    
     return (
-        <div className={styles['disco']}>
+        <div className={styles['disco']} onClick={redirectToDisco}>
             <figure>
                 <img src={img} alt={titulo} />
             </figure>

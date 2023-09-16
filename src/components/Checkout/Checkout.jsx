@@ -51,7 +51,7 @@ const Checkout = () => {
         return (
             <section className={styles['checkout__respuesta']}>
                 <h1>(づ ◕‿◕ )づ</h1>
-                <h1>🎉 Gracias por tu Compra 🎉 </h1>
+                <h1>🎉 Gracias por tu Compra</h1>
                 <div className={styles['checkout__respuesta--id']}>
                     <h2>Tu número de pedido es:</h2>
                     <h3>{pedidoId}</h3>

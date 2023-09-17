@@ -5,7 +5,7 @@
 ## Alumno: Alejandro Ferreira | Com.: 55735
 
 Este proyecto se inició con [Create React App] (https://github.com/facebook/create-react-app).\
-Y fue desplegado con Vercel accecible en: (https://ice-club-react.vercel.app/)
+Y fue desplegado con Vercel accecible en: (https://ice-club-react.vercel.app/).
 
 ## Sobre el proyecto
 
@@ -35,7 +35,7 @@ En el directorio del proyecto, puede ejecutar:
 ### `npm start`
 
 Ejecuta la aplicación en modo de desarrollo.\\
-Open [http://localhost:3000](http://localhost:3000) para verlo en su navegador..
+[http://localhost:3000](http://localhost:3000) para verlo en su navegador..
 
 ### `npm test`
 

@@ -89,7 +89,7 @@ const Checkout = () => {
                         <h2>Enviando Pedido</h2>
                         <span class="loader"></span>
                     </div>
-                ): (
+                ) : (
                     <div className={styles['checkout__total']}>
                         <h2>Total de tu compra: ${ precioTotal() }</h2>
                         <button type="submit">CONFIRMAR COMPRA</button>

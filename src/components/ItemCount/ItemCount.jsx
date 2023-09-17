@@ -1,10 +1,7 @@
-// import { useState } from 'react';
 import styles from './styles.module.scss';
 
-const ItemCount = ( {cantidad, handleSumar, handleRestar, handleAgregar} ) => {
-    
+const ItemCount = ( {cantidad, handleSumar, handleRestar, handleAgregar} ) => {  
    
-
     return (
         <>
         <div className={styles['counter']}>

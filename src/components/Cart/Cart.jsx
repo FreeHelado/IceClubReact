@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const Cart = () => {
+    const { carrito, precioTotal, vaciarCarrito, eliminarDelCarrito } = useContext(CartContext);
 
     const alertaVaciado = () => {
         Swal.fire({
@@ -44,8 +45,6 @@ const Cart = () => {
         })
     }
 
-    const { carrito, precioTotal, vaciarCarrito, eliminarDelCarrito } = useContext(CartContext);
-    
     const handleVaciarCarrito = () => {
         alertaVaciado();
     }
@@ -53,7 +52,6 @@ const Cart = () => {
     const handleEliminar = (id) => {
         alertaEliminado(id);
     };
-
 
     return (
         <div className={styles['micarrito']}>
@@ -97,8 +95,7 @@ const Cart = () => {
                 <h1>( ͡° ͜ʖ ͡°) </h1>
                 <h2>No hay nada en tu carrito</h2>
             </section>
-            }    
-                
+            }           
         </div>
     )
 }
